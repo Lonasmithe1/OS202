@@ -209,7 +209,7 @@ int main( int nargs, char* argv[] )
     std::vector<int> local_data(size_bucket);
     MPI_Alltoallv(data.data(),size_bloc.data(), display_bloc.data(), MPI_INT, local_data.data(),size_bloc_rcv.data(),display_bloc_rcv.data(), MPI_INT, MPI_COMM_WORLD);
     //MPI_Scatterv(data.data(), size_bloc.data(), display_bloc.data(), MPI_INT, local_data.data(), size_bloc[rank], MPI_INT, 0, MPI_COMM_WORLD);
-
+//Comment implémenter la méthode Scatterv comme évoqué en cours ? On est censé l'appeller nbp fois ? Trop complexe
     std::cout<<"Processus "<<rank<<" : Alltoallv done, tableau recupere : "<<local_data <<std::endl;
    
 /*    for(int i=0;i<nbp+1;i++){
